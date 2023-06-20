@@ -1,0 +1,19 @@
+service: serverless-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  app-api:
+    handler: index.handler
+    events:
+      - http:
+          path: /
+          method: GET
+          cors: true
+      - http:
+          path: /{proxy}
+          method: any
+          cors: true
