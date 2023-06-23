@@ -18,6 +18,21 @@ This template demonstrates how to deploy a NodeJS function running on AWS Lambda
 
 ## Usage
 
+### Step 1:  Serverless | sls installation
+- npm i -g serverless
+
+### Step 2: Connect serverless with AWS
+- serverless config credentials --provider aws --key <key> --secret <secret-key> custom-profile
+  // if already configuered add flag '--overwrite'
+
+## Step 3: Create teplate for NodeJs project
+- sls create -t aws-nodejs
+
+### Step 4: install 'serverless-http' package
+- npm i serverless-http
+
+### Step 5: 
+
 ### Deployment
 
 In order to deploy the example, you need to run the following command:
